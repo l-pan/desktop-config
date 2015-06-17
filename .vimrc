@@ -1,17 +1,30 @@
-set nu
-syntax on
-se shiftwidth=3
-set autoindent
-set cindent
-set cinoptions=li
-set omnifunc=htmlcomplete#CompleteTags
-iabbrev </ </<C-X><C-O>
-set background=dark
-" colorscheme solarized
-"set guifont=Monospace\ 18
-filetype plugin on
+" Vundle requirements
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+call vundle#end()
 filetype plugin indent on
 
-" Html variables 
-let g:html_template = '~/.vim/template.html'
-let g:html_tag_case = 'lowercase'
+" Vundle plugins
+
+Plugin 'othree/html5.vim'
+
+" HTML Macro
+
+:let g:html_tag_case = 'lowercase'
+
+" My config
+
+syn on
+set nu
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=80
+set smarttab
+set expandtab
+set autoindent
