@@ -1,5 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/lawrence/.vim/ftplugin'
 let g:netrw_dirhist_2='/home/lawrence/workspaces/C/1-mastermind'
 let g:netrw_dirhist_3='/home/lawrence/.vim/ftplugin'
+let g:netrw_dirhist_4='/home/lawrence/Desktop/sudoku/app/controllers'
+let g:netrw_dirhist_5='/home/lawrence/Desktop/sudoku/app/views/sudoku'
+let g:netrw_dirhist_6='/home/lawrence/workspaces/rails/sample_app/app/views/users'
+let g:netrw_dirhist_7='/home/lawrence/workspaces/rails/sample_app/app/views'
+let g:netrw_dirhist_8='/home/lawrence/workspaces/rails/sample_app/app/views/users'
+let g:netrw_dirhist_9='/home/lawrence/workspaces/rails/sample_app/test/models'

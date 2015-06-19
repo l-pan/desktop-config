@@ -12,6 +12,7 @@ filetype plugin indent on
 " Vundle plugins
 
 Plugin 'othree/html5.vim'
+Plugin 'mattn/emmet-vim'
 
 " HTML Macro
 
