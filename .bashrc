@@ -97,9 +97,19 @@ alias l='ls -CF'
 # Xterm transparent
 
 [ -n "$XTERM_VERSION" ] && transset-df -a >/dev/null
+
 # Git!
+
 alias sta='git status'
 alias bra='git branch'
+
+# Rails
+alias sty='cd '$(pwd)'/app/assets/stylesheets'
+alias lay='cd '$(pwd)'/app/views/layouts'
+alias vie='cd '$(pwd)'/app/views/'
+alias con='cd '$(pwd)'/app/controllers'
+alias mod='cd '$(pwd)'/app/models'
+
 
 # my aliases
 alias c='clear'
