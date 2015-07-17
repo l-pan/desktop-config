@@ -98,6 +98,8 @@ alias l='ls -CF'
 
 [ -n "$XTERM_VERSION" ] && transset-df -a >/dev/null
 
+# Connect to rasperry pi locally
+alias pi='ssh 192.168.0.50 -l lawrence -p 22'
 # Git!
 
 alias sta='git status'
@@ -110,20 +112,23 @@ alias vie='cd '$(pwd)'/app/views/'
 alias con='cd '$(pwd)'/app/controllers'
 alias mod='cd '$(pwd)'/app/models'
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
 
 # my aliases
 alias c='clear'
+alias cdcc='cd ~/workspaces/cplusplus'
+alias com='source ~/workspaces/bash/python/cd_ccc.sh'
 alias cdc='cd ~/workspaces/C'
 alias cdb='cd ~/workspaces/bash'
 alias cdp='cd ~/workspaces/python'
+alias cdh='cd ~/workspaces/haskell'
 alias ror='cd ~/workspaces/rails'
 # C aliases
 alias cc='source ~/workspaces/bash/mkc/create.sh'
-alias run='bash ~/workspaces/bash/mkc/compile.sh'
 alias runa='./a.out'
-# Ruby aliases
+# workspace aliases
 alias py='source ~/workspaces/bash/python/create.sh'
-alias ccc='source ~/workspaces/bash/python/create_ccc.sh'
 alias rb='source ~/workspaces/bash/ruby/create.sh'
 alias cdr='cd ~/workspaces/ruby'
 # Web aliases
@@ -164,3 +169,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
