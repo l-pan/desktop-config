@@ -106,17 +106,18 @@ alias sta='git status'
 alias bra='git branch'
 
 # Rails
-alias sty='cd '$(pwd)'/app/assets/stylesheets'
-alias lay='cd '$(pwd)'/app/views/layouts'
-alias vie='cd '$(pwd)'/app/views/'
-alias con='cd '$(pwd)'/app/controllers'
-alias mod='cd '$(pwd)'/app/models'
+alias sty='cd $(pwd)/app/assets/stylesheets'
+alias lay='cd $(pwd)/app/views/layouts'
+alias vie='cd $(pwd)/app/views/'
+alias con='cd $(pwd)/app/controllers'
+alias mod='cd $(pwd)/app/models'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 
 # my aliases
 alias c='clear'
+alias wifi='sudo wifi-menu'
 alias cdcc='cd ~/workspaces/cplusplus'
 alias com='source ~/workspaces/bash/python/cd_ccc.sh'
 alias cdc='cd ~/workspaces/C'
