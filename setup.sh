@@ -50,7 +50,14 @@ function check_type(){
   fi
 }
 
+function setup_vundle(){
+  confirm "Set up Vundle?"
+  cp -r .vim ~
+  git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
+}
+
 
 check_type
 check_rc_exist "$TYPE"
 create_symlinks
+setup_vundle
