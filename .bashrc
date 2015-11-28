@@ -117,7 +117,6 @@ alias mod='cd $(pwd)/app/models'
 
 # my aliases
 alias c='clear'
-alias wifi='sudo wifi-menu'
 alias cdcc='cd ~/workspaces/cplusplus'
 alias com='source ~/workspaces/bash/python/cd_ccc.sh'
 alias cdc='cd ~/workspaces/C'
@@ -126,24 +125,8 @@ alias cdp='cd ~/workspaces/python'
 alias cdh='cd ~/workspaces/haskell'
 alias ror='cd ~/workspaces/rails'
 # C aliases
-alias cc='source ~/workspaces/bash/mkc/create.sh'
-alias runa='./a.out'
 # workspace aliases
-alias py='source ~/workspaces/bash/python/create.sh'
-alias rb='source ~/workspaces/bash/ruby/create.sh'
 alias cdr='cd ~/workspaces/ruby'
-# Web aliases
-alias www='sudo systemctl start httpd.service'
-alias web='cd /srv/http'
-# backlight controller :P
-alias backlight='sudo chmod 777 /sys/class/backlight/radeon_bl0/brightness'
-alias up='bash ~/workspaces/bash/backlight/up.sh'
-alias down='bash ~/workspaces/bash/backlight/down.sh'
-# lock screen
-alias lock='i3lock -i ~/wallpapers/python_lock_1600x900.png'
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # ibus
 export GTK_IM_MODULE=ibus
