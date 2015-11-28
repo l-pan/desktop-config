@@ -98,58 +98,16 @@ alias l='ls -CF'
 
 [ -n "$XTERM_VERSION" ] && transset-df -a >/dev/null
 
-# Connect to rasperry pi locally
-alias pi='ssh 192.168.0.50 -l lawrence -p 22'
 # Git!
 
 alias sta='git status'
 alias bra='git branch'
-
-# Rails
-alias sty='cd $(pwd)/app/assets/stylesheets'
-alias lay='cd $(pwd)/app/views/layouts'
-alias vie='cd $(pwd)/app/views/'
-alias con='cd $(pwd)/app/controllers'
-alias mod='cd $(pwd)/app/models'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 
 # my aliases
 alias c='clear'
-alias wifi='sudo wifi-menu'
-alias cdcc='cd ~/workspaces/cplusplus'
-alias com='source ~/workspaces/bash/python/cd_ccc.sh'
-alias cdc='cd ~/workspaces/C'
-alias cdb='cd ~/workspaces/bash'
-alias cdp='cd ~/workspaces/python'
-alias cdh='cd ~/workspaces/haskell'
-alias ror='cd ~/workspaces/rails'
-# C aliases
-alias cc='source ~/workspaces/bash/mkc/create.sh'
-alias runa='./a.out'
-# workspace aliases
-alias py='source ~/workspaces/bash/python/create.sh'
-alias rb='source ~/workspaces/bash/ruby/create.sh'
-alias cdr='cd ~/workspaces/ruby'
-# Web aliases
-alias www='sudo systemctl start httpd.service'
-alias web='cd /srv/http'
-# backlight controller :P
-alias backlight='sudo chmod 777 /sys/class/backlight/radeon_bl0/brightness'
-alias up='bash ~/workspaces/bash/backlight/up.sh'
-alias down='bash ~/workspaces/bash/backlight/down.sh'
-# lock screen
-alias lock='i3lock -i ~/wallpapers/python_lock_1600x900.png'
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# ibus
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-ibus-daemon -d -x
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
