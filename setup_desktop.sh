@@ -15,11 +15,11 @@ function confirm(){
 function check_rc_exist(){
   local b="$HOME/.bashrc"
   local v="$HOME/.vimrc"
-  if [[ -e "$b" ]];then
+  if [[ -h "$b" || -e "$b" ]];then
     confirm "$b already exits, delete it? "
     rm "$b"
   fi
-  if [[ -e "$v" ]];then
+  if [[ -h "$v" || -e "$v" ]];then
     confirm "$b already exits, delete it? "
     rm "$v"
   fi
