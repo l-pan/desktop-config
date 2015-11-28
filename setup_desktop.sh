@@ -1,5 +1,6 @@
 CURRENT_PATH=$(pwd)
-FILES=("$HOME/.bashrc" "$HOME/.vimrc" "$HOME/.tmux.conf")
+FILES=("/.bashrc" "/.vimrc" "/.tmux.conf")
+INPUT_TYPE="$1"
 
 # $1 => question
 function confirm(){
@@ -15,25 +16,41 @@ function confirm(){
 # Check if .bashrc or .vimrc exits before create symlink
 function check_rc_exist(){
   for i in ${FILES[@]};do
-    if [[ -h "$i" || -e "$i" ]];then
-      confirm "$i already exits, delete it? "
-      rm "$i"
+    local full_path="$HOME""$i"
+    if [[ -h "$full_path" || -e "$full_path" ]];then
+      confirm "$full_path already exits, delete it? "
+      rm "$full_path"
     fi
   done
 }
 
 # $1 => {'0' => server, '1' => desktop}
 function create_symlinks(){
-  local b=".bashrc"
-  local v=".vimrc"
-  if [[ $1 == "0" ]];then
-    ln -s "$CURRENT_PATH"/server/"$b" "$HOME"/"$b"
-    ln -s "$CURRENT_PATH"/server/"$v" "$HOME"/"$v"
+  for i in ${FILES[@]};do
+    if [[ $TYPE == "server" ]];then
+      ln -s "$CURRENT_PATH/server$i" "$HOME""$i"
+    elif [[ $TYPE == "desktop" ]];then
+      ln -s "$CURRENT_PATH""$i" "$HOME""$i"
+    else
+      echo "error"
+      exit
+    fi
+  done
+}
+
+# Assign value to TYPE
+function check_type(){
+  if [[ "$INPUT_TYPE" == "-s" || "$INPUT_TYPE" == "-S" ]];then
+    TYPE="server"
+  elif [[ "$INPUT_TYPE" == "-d" || "$INPUT_TYPE" == "-D" ]];then
+    TYPE="desktop"
   else
-    ln -s "$CURRENT_PATH"/"$b" "$HOME"/"$b"
-    ln -s "$CURRENT_PATH"/"$v" "$HOME"/"$v"
+    echo "Invalid argument. -s for server mode, -d for desktop mode"
+    exit
   fi
 }
 
-check_rc_exist
+
+check_type
+check_rc_exist "$TYPE"
 create_symlinks
