@@ -11,6 +11,9 @@ filetype plugin indent on
 
 " Vundle plugins
 
+"color theme
+Plugin 'altercation/vim-colors-solarized'
+
 Plugin 'othree/html5.vim'
 Plugin 'mattn/emmet-vim'
 
@@ -29,6 +32,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
+
+" node.js
+Plugin 'pangloss/vim-javascript'
+Plugin 'moll/vim-node'
 
 
 " My config
@@ -55,3 +62,14 @@ let python_highlight_all = 1
 let g:surround_45 = "<% \r %>"
 let g:surround_61 = "<%= \r %>"
 let g:surround_36 = "<% \r %><% end %>"
+
+" Solarized
+if has('gui_running')
+  set background=dark
+  colorscheme solarized
+  set guifont =Monospace\ 15
+  set guioptions-=m  "remove menu bar
+  set guioptions-=T  "remove toolbar
+  set guioptions-=r  "remove right-hand scroll bar
+  set guioptions-=L  "remove left-hand scroll bar
+endif
