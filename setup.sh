@@ -54,6 +54,7 @@ function setup_vundle(){
   confirm "Set up Vundle?"
   cp -r .vim ~
   git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
+  echo "Run PluginInstall to install the plugins"
 }
 
 
