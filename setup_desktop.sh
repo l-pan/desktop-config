@@ -1,4 +1,5 @@
 CURRENT_PATH=$(pwd)
+FILES=("$HOME/.bashrc" "$HOME/.vimrc" "$HOME/.tmux.conf")
 
 # $1 => question
 function confirm(){
@@ -13,16 +14,12 @@ function confirm(){
 
 # Check if .bashrc or .vimrc exits before create symlink
 function check_rc_exist(){
-  local b="$HOME/.bashrc"
-  local v="$HOME/.vimrc"
-  if [[ -h "$b" || -e "$b" ]];then
-    confirm "$b already exits, delete it? "
-    rm "$b"
-  fi
-  if [[ -h "$v" || -e "$v" ]];then
-    confirm "$b already exits, delete it? "
-    rm "$v"
-  fi
+  for i in ${FILES[@]};do
+    if [[ -h "$i" || -e "$i" ]];then
+      confirm "$i already exits, delete it? "
+      rm "$i"
+    fi
+  done
 }
 
 # $1 => {'0' => server, '1' => desktop}
