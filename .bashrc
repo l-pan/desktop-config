@@ -128,6 +128,8 @@ alias ror='cd ~/workspaces/rails'
 # workspace aliases
 alias cdr='cd ~/workspaces/ruby'
 
+alias web='cd /srv/www/http'
+
 # ibus
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
