@@ -124,6 +124,7 @@ alias cdb='cd ~/workspaces/bash'
 alias cdp='cd ~/workspaces/python'
 alias cdh='cd ~/workspaces/haskell'
 alias ror='cd ~/workspaces/rails'
+alias cdj='cd ~/workspaces/javascript'
 # C aliases
 # workspace aliases
 alias cdr='cd ~/workspaces/ruby'

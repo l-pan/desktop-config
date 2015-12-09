@@ -34,8 +34,21 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 
 " node.js
-Plugin 'pangloss/vim-javascript'
 Plugin 'moll/vim-node'
+
+" Javascript
+Plugin 'pangloss/vim-javascript'
+
+Plugin 'othree/javascript-libraries-syntax.vim'
+let g:used_javascript_libs = 'angularjs'
+
+Plugin 'scrooloose/syntastic.git'
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['jshint']
 
 
 " My config
