@@ -131,6 +131,9 @@ alias cdr='cd ~/workspaces/ruby'
 
 alias web='cd /srv/http/html'
 
+# temp
+alias robo='cd ~/workspaces/robotics'
+
 # ibus
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
