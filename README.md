@@ -15,3 +15,6 @@ Use Desktop config
 
 ### Note
 This script only supports Vundle
+
+### License
+The MIT License
