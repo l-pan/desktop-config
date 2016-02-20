@@ -16,7 +16,10 @@ filetype plugin on
 Plugin 'altercation/vim-colors-solarized'
 
 " Markdown preview
-Plugin 'suan/vim-instant-markdown'
+" Plugin 'suan/vim-instant-markdown'
+
+" Spellcheck
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_ca
 
 " html
 Plugin 'mattn/emmet-vim'
@@ -26,6 +29,11 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'tpope/vim-surround'
 Plugin 'Shougo/vimproc.vim'
+
+" Airline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+set laststatus=2
 
 " Git wrapper
 Plugin 'tpope/vim-fugitive'
@@ -47,9 +55,14 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 let g:used_javascript_libs = 'angularjs'
 
+" Reactjs
+Plugin 'mxw/vim-jsx'
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+" For webpack-dev-server watcher
+set backupcopy=yes
+
 " typescript
 Plugin 'leafgarland/typescript-vim'
-Plugin 'clausreinke/typescript-tools.vim'
 au BufRead,BufNewFile *.ts        setlocal filetype=typescript
 set rtp+=./.vim/bundle/typescript-tools.vim/
 
@@ -60,14 +73,15 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_typescript_checkers = ['tslint']
 
 " typescript checker target
 
 " Disable certain file types
 let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
-                     \ 'passive_filetypes': ['typescript', 'scss'] }
+                     \ 'passive_filetypes': ['scss'] }
 
 " autocomplete
 Plugin 'Valloric/YouCompleteMe'
@@ -78,6 +92,9 @@ set completeopt-=preview
 
 " for javascript
 Plugin 'ternjs/tern_for_vim'
+
+" Golang
+Plugin 'fatih/vim-go'
 
 " My config
 
