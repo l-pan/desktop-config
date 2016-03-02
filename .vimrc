@@ -30,6 +30,10 @@ Plugin 'xolox/vim-easytags'
 Plugin 'tpope/vim-surround'
 Plugin 'Shougo/vimproc.vim'
 
+" Nerdtree
+Plugin 'scrooloose/nerdtree'
+map <C-n> :NERDTreeToggle<CR>
+
 " Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -39,7 +43,6 @@ set laststatus=2
 Plugin 'tpope/vim-fugitive'
 
 " Rails helpers
-Plugin 'scrooloose/nerdtree'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
@@ -65,6 +68,9 @@ set backupcopy=yes
 Plugin 'leafgarland/typescript-vim'
 au BufRead,BufNewFile *.ts        setlocal filetype=typescript
 set rtp+=./.vim/bundle/typescript-tools.vim/
+
+" C++
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " Syntax checker
 Plugin 'scrooloose/syntastic.git'
