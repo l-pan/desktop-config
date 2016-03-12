@@ -14,6 +14,7 @@ filetype plugin on
 
 "color theme
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'marciomazza/vim-brogrammer-theme'
 
 " Markdown preview
 " Plugin 'suan/vim-instant-markdown'
@@ -128,7 +129,7 @@ let python_highlight_all = 1
 " Solarized
 if has('gui_running')
   set background=dark
-  colorscheme solarized
+  colorscheme brogrammer
   set guifont =Monospace\ 15
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
