@@ -27,14 +27,6 @@ shopt -s checkwinsize
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
@@ -89,50 +81,37 @@ fi
 # Ruby gems
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
-# some more ls aliases
+# rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Utils
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Xterm transparent
-
-[ -n "$XTERM_VERSION" ] && transset-df -a >/dev/null
+alias c='clear'
+alias update='sudo pacman -Syu'
 
 # Connect to rasperry pi locally
 alias pi='ssh 192.168.0.50 -l lawrence -p 22'
-# Git!
 
+# Git!
 alias sta='git status'
 alias bra='git branch'
-
-# Rails
-alias sty='cd $(pwd)/app/assets/stylesheets'
-alias lay='cd $(pwd)/app/views/layouts'
-alias vie='cd $(pwd)/app/views/'
-alias con='cd $(pwd)/app/controllers'
-alias mod='cd $(pwd)/app/models'
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+alias push='git push'
 
 
-# my aliases
-alias c='clear'
+# workspace aliases
+alias work='cd ~/workspaces/active'
+# Languages
 alias cdcc='cd ~/workspaces/cplusplus'
-alias com='source ~/workspaces/bash/python/cd_ccc.sh'
 alias cdc='cd ~/workspaces/C'
 alias cdb='cd ~/workspaces/bash'
 alias cdp='cd ~/workspaces/python'
 alias cdh='cd ~/workspaces/haskell'
 alias ror='cd ~/workspaces/rails'
 alias cdj='cd ~/workspaces/javascript'
-# C aliases
-# workspace aliases
 alias cdr='cd ~/workspaces/ruby'
-
-alias web='cd /srv/http/html'
-
-# temp
-alias robo='cd ~/workspaces/robotics'
 
 # ibus
 export GTK_IM_MODULE=ibus
