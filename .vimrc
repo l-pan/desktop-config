@@ -35,6 +35,9 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 
+" Visual
+" Plugin 'Yggdroot/indentLine'
+
 " Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -57,7 +60,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 
 Plugin 'othree/javascript-libraries-syntax.vim'
-let g:used_javascript_libs = 'angularjs'
+let g:used_javascript_libs = 'angularjs, react'
 
 " Reactjs
 Plugin 'mxw/vim-jsx'
