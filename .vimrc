@@ -86,6 +86,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_typescript_checkers = ['tslint']
 
+" Prefer local eslint
+Plugin 'mtscout6/syntastic-local-eslint.vim'
+
 " typescript checker target
 
 " Disable certain file types
