@@ -3,12 +3,9 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+set shell=/bin/bash
 
 Plugin 'gmarik/Vundle.vim'
-
-call vundle#end()
-filetype plugin indent on
-filetype plugin on
 
 " Vundle plugins
 
@@ -109,6 +106,11 @@ Plugin 'ternjs/tern_for_vim'
 " Golang
 Plugin 'fatih/vim-go'
 
+call vundle#end()
+filetype plugin indent on
+filetype plugin on
+
+
 " My config
 
 syn on
@@ -136,7 +138,7 @@ let python_highlight_all = 1
 if has('gui_running')
   set background=dark
   colorscheme brogrammer
-  set guifont =Monospace\ 15
+  set guifont =Monospace\ 17
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
