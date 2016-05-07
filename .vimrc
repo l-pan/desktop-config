@@ -138,7 +138,7 @@ let python_highlight_all = 1
 if has('gui_running')
   set background=dark
   colorscheme brogrammer
-  set guifont =Monospace\ 17
+  set guifont =Monospace\ 20
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar

@@ -1,5 +1,5 @@
 CURRENT_PATH=$(pwd)
-FILES=("/.bashrc" "/.vimrc" "/.tmux.conf")
+FILES=("/.bashrc" "/.bash_profile" "/.vimrc")
 INPUT_TYPE="$1"
 
 # $1 => question

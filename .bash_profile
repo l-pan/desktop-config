@@ -1,5 +1,4 @@
 # Utils
-alias vim='/usr/local/Cellar/vim/'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -12,4 +11,4 @@ alias bra='git branch'
 alias push='git push'
 
 # workspace aliases
-alias work='cd ~/workspaces/active'
+alias work='cd ~/Desktop/workspaces/active'
