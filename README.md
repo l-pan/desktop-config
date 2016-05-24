@@ -1,5 +1,9 @@
 # Desktop Configuration Manager
 
+# Deprecated
+See [this](https://github.com/l-pan/dotfiles) repo
+
+
 ### Usage
 
 Use server config
